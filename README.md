@@ -1,47 +1,42 @@
-# Algorithm Galaxy
+# Knowledge Galaxy
 
-An interactive learning platform prototype for algorithm concepts.
+A generic interactive learning platform for building topic-based courses over time.
 
-## What this is
+## Tech stack
 
-- A static, dependency-free web app.
-- A first course called **Algorithm foundations**.
-- A cinematic mission-map experience where learners explore concept nodes.
-- Original summaries, labs, boss-gate questions, XP, and progress signals based on common algorithm topics from the PDF outline.
-- Local progress tracking through `localStorage`.
-
-## What this is not
-
-This is not a replacement for the source book and does not reproduce its chapters. The PDF is used only as a topic map so the platform can teach concepts through original interactive missions.
+- Vite
+- React
+- TypeScript
+- Data-driven course and topic definitions
 
 ## Run locally
 
-From this folder:
-
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Then open:
+Then open the local Vite URL.
 
-```text
-http://localhost:4173
-```
+## Structure
 
-## Current modules
+- `src/data/topics.ts` defines the platform topic catalog.
+- `src/data/courses/` contains course content by topic.
+- `src/types/content.ts` defines reusable content models.
+- `src/components/` contains page and course UI.
+- `src/labs/` contains reusable interactive lab renderers.
 
-1. Search & Complexity
-2. Lists & Sorting
-3. Recursion & Stack
-4. Divide & Conquer
-5. Hash Tables
-6. Graph Search
-7. Weighted Paths
-8. Greedy Choices
+## Current topics
 
-## Next useful steps
+- Algorithms: available now.
+- Distributed Systems: planned.
+- Data-Intensive Applications: planned.
+- System Design: planned.
+- ML Systems: planned.
 
-- Add user accounts and saved progress on a backend.
-- Add authoring tools for importing topic maps from future PDFs.
-- Add adaptive quizzes and spaced-repetition review.
-- Add richer visualization canvases for graph and sorting modules.
+## Adding a topic
+
+1. Add the topic metadata in `src/data/topics.ts`.
+2. Add a course file in `src/data/courses/`.
+3. Register the course in `src/data/topics.ts`.
+4. Add any new lab type to `src/types/content.ts` and implement it in `src/labs/`.

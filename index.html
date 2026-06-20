@@ -3,131 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algorithm Galaxy</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%97%88%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Knowledge Galaxy</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"
+    />
   </head>
   <body>
-    <div class="cosmos" aria-hidden="true">
-      <div class="stars stars-one"></div>
-      <div class="stars stars-two"></div>
-      <div class="nebula nebula-a"></div>
-      <div class="nebula nebula-b"></div>
-      <div class="scanline"></div>
-    </div>
-
-    <div class="app-shell">
-      <header class="hero">
-        <nav class="topbar" aria-label="Primary navigation">
-          <a class="brand" href="./index.html" aria-label="Algorithm Galaxy home">
-            <span class="brand-mark">◈</span>
-            <span>Algorithm Galaxy</span>
-          </a>
-          <div class="topbar-actions">
-            <span class="source-note">PDF topic map → original interactive missions</span>
-            <button class="ghost-button" id="reset-progress" type="button">Reset universe</button>
-          </div>
-        </nav>
-
-        <section class="hero-grid">
-          <div class="hero-copy-wrap">
-            <p class="eyebrow">Mission-based learning prototype</p>
-            <h1>Turn algorithms into a galaxy learners can explore.</h1>
-            <p class="hero-copy">
-              Instead of reading chapters, learners launch missions, manipulate simulations, earn
-              signal, and unlock the next concept in a living map.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-button launch-button" href="#curriculum">Enter the galaxy</a>
-              <a class="secondary-button" href="#lesson-player">Open mission deck</a>
-            </div>
-          </div>
-
-          <aside class="mission-hud" aria-labelledby="progress-title">
-            <div class="hud-orb">
-              <div class="progress-ring" aria-hidden="true">
-                <span id="progress-percent">0%</span>
-              </div>
-            </div>
-            <p class="eyebrow">Universe signal</p>
-            <h2 id="progress-title">Learning pulse</h2>
-            <p id="progress-summary">Complete checkpoints to stabilize the galaxy.</p>
-            <div class="hud-stats" aria-label="Learning stats">
-              <span><strong id="mission-count">0</strong> missions cleared</span>
-              <span><strong id="xp-count">0</strong> XP</span>
-            </div>
-          </aside>
-        </section>
-      </header>
-
-      <main>
-        <section class="galaxy-section" id="curriculum" aria-labelledby="curriculum-title">
-          <div class="section-heading">
-            <p class="eyebrow">Explore the first constellation</p>
-            <h2 id="curriculum-title">Algorithm foundations</h2>
-            <p>
-              Pick a glowing node to jump into a mission. Each node is an original learning
-              experience mapped to a core algorithm concept.
-            </p>
-          </div>
-
-          <div class="galaxy-board">
-            <div class="galaxy-core" aria-hidden="true">
-              <span>ALG</span>
-            </div>
-            <div class="orbit-ring ring-one" aria-hidden="true"></div>
-            <div class="orbit-ring ring-two" aria-hidden="true"></div>
-            <div class="orbit-ring ring-three" aria-hidden="true"></div>
-            <div class="module-grid" id="module-grid"></div>
-          </div>
-        </section>
-
-        <section class="lesson-shell" id="lesson-player" aria-live="polite">
-          <aside class="lesson-sidebar" aria-label="Lesson modules">
-            <p class="eyebrow">Mission log</p>
-            <div id="lesson-tabs" class="lesson-tabs"></div>
-          </aside>
-
-          <article class="lesson-card">
-            <div class="lesson-header">
-              <div>
-                <p class="eyebrow" id="lesson-kicker"></p>
-                <h2 id="lesson-title"></h2>
-                <p id="lesson-summary"></p>
-              </div>
-              <span class="difficulty-pill" id="lesson-meta"></span>
-            </div>
-
-            <div class="mission-signal" id="mission-signal">
-              Calibrating mission signal...
-            </div>
-
-            <div class="outcomes" id="lesson-outcomes"></div>
-
-            <div class="activity-panel">
-              <div class="panel-heading">
-                <div>
-                  <p class="eyebrow">Interactive lab</p>
-                  <h3 id="activity-title"></h3>
-                </div>
-                <button class="ghost-button" id="activity-reset" type="button">Rewind lab</button>
-              </div>
-              <div id="activity-root"></div>
-            </div>
-
-            <div class="quiz-panel">
-              <div>
-                <p class="eyebrow">Boss gate</p>
-                <h3 id="quiz-question"></h3>
-              </div>
-              <div id="quiz-options" class="quiz-options"></div>
-              <p id="quiz-feedback" class="feedback" role="status"></p>
-            </div>
-          </article>
-        </section>
-      </main>
-    </div>
-
-    <script type="module" src="./src/app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
